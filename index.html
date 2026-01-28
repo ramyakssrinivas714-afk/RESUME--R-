@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ramya S | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+/* Navbar */
+nav {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    color: #4ecdc4;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 50px;
+    background: white;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.section.active {
+    display: block;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Profile */
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+    background: #fafafa;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #4ecdc4;
+}
+
+/* Project images */
+.project-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.getElementsByClassName("section");
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+    }
+    document.getElementById(id).classList.add("active");
+}
+</script>
+</head>
+
+<body onload="showSection('home')">
+
+<!-- NAVBAR -->
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section">
+    <img src="profile.jpg" class="profile-img" alt="Ramya S">
+    <h1>Hello, I'm Ramya S</h1>
+    <p>
+        I am a Computer Science student passionate about programming,
+        web development, and modern technologies.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+    <h2>Programming Languages</h2>
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>HTML, CSS, JavaScript</li>
+    </ul>
+
+    <h2>Extra Courses</h2>
+    <ul>
+        <li>Artificial Intelligence</li>
+        <li>Python Programming</li>
+        <li>Cloud Computing</li>
+        <li>Web Development</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>Problem Solving</li>
+        <li>Web Design</li>
+        <li>Database Basics</li>
+        <li>Project Development</li>
+    </ul>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>Computer Science Projects</h2>
+
+    <div class="card">
+        <h3>Online Quiz System</h3>
+        <p>HTML, CSS, JavaScript, Python</p>
+        <a href="#">Project Link</a>
+        <img src="project1.jpg" class="project-img">
+    </div>
+
+    <div class="card">
+        <h3>Student Management System</h3>
+        <p>Python, Database</p>
+        <a href="#">Project Link</a>
+        <img src="project2.jpg" class="project-img">
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p><b>Name:</b> Ramya S</p>
+    <p><b>Email:</b> ramyakssrinivas714@gmail.com</p>
+</div>
+
+</body>
+</html>
